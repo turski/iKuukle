@@ -1,0 +1,11 @@
+col1:
+	NewsFeedBlock('http://www.mtv3.fi/rss/uutiset.rss', 4)
+	NewsFeedBlock('http://www.iltasanomat.fi/rss/uutiset.xml', 4)
+	NewsFeedBlock('http://www.hs.fi/uutiset/rss/', 4)
+col2:
+	NewsFeedBlock('http://yle.fi/uutiset/rss/uutiset.rss', 8)
+	NewsFeedBlock('http://www.tietoviikko.fi/rss.xml', 8)
+col3:
+	NewsFeedBlock('http://plaza.fi/muropaketti/feed', 10)
+col4:
+	TelkussaBlock(channels=(1, 2, 3, 4, 5, 56), prog_count=3)

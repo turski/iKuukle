@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<title>iKuukle</title>
+<link rel="stylesheet" type="text/css" href="static/base.css">
+<style type="text/css">
+.column {width: {{ 100.0/block_grid.column_count }}%}
+</style>
+</head>
+<body>
+<div id="container">
+<div id="gsea">
+<form action="http://www.google.fi/search" method="get" name="f" id="sfrm">
+<table cellspacing="0" cellpadding="0" id="gsea_table">
+<tbody>
+<tr>
+<td align="center" valign="top" class="gseain">
+<br>
+<input type="text" maxlength="2048" size="55" name="q">
+<br><input type="submit" value="Google-haku">
+<input type="submit" name="btnI" value="Kokeilen onneani">
+</td>
+<td valign="top">
+<br>
+<p class="gseaopt">
+<a href="http://www.google.fi/advanced_search?hl=fi">Tarkennettu haku</a>
+<br>
+<a href="http://www.google.fi/language_tools?hl=fi">Kielivalinnat</a>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+</div>
+<br class="clear">
+{% for block_column in block_grid.columns %}
+<div class="column">
+{{ block_column|safe }}
+</div>
+{% endfor %}
+<br class="clear">
+</div>
+</body>
+</html>
