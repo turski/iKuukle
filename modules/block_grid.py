@@ -1,5 +1,5 @@
-import re, modules
 from threading import BoundedSemaphore, Thread
+import re, modules
 
 class BlockGrid(object):
 	"""Object that holds information about whole customizable area of website"""
@@ -33,6 +33,7 @@ class BlockGrid(object):
 			raise TypeError, 'Must be an instance of BlockColumn'
 
 	def parse_conf(self, conf):
+		"""Parse layout configuration file and prepare BlockGrid for generate"""
 		column_exp = re.compile('^\s*(?P<name>\w+)\s*:\s*$')
 		block_exp = re.compile('^\s+(?P<method>\w+)\((?P<args>.*)\)\s*$')
 		with open(conf) as conf:
@@ -60,6 +61,7 @@ class BlockGrid(object):
 							                 'in any column'
 
 	def generate(self):
+		"""Threaded generation of html code"""
 		sema = BoundedSemaphore(10)
 		pool = []
 		for column in self.columns:
@@ -111,3 +113,6 @@ class Block(object):
 
 	def __unicode__(self):
 		return unicode(self._html_)
+
+	def generate(self, lock=None):
+		pass
