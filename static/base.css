@@ -1,74 +1,74 @@
 html, body, div, p, ul, li, table, tr, td, th, h1, h2, h3, h4 {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 html, body {
-	font-family: sans;
-	background-color: Window;
-	color: WindowText;
-	height: 100%;
-	width: 100%;
+    font-family: sans;
+    background-color: Window;
+    color: WindowText;
+    height: 100%;
+    width: 100%;
 }
 a, a:link, a:visited {
-	color: WindowText;
-	text-decoration: none;
+    color: WindowText;
+    text-decoration: none;
 }
 a:hover, a:active {
-	color: Highlight;
+    color: Highlight;
 }
 br .clear {
-	clear: both;
+    clear: both;
 }
 #container {
-	width: 100%;
-	min-height: 100%;
+    width: 100%;
+    min-height: 100%;
 }
 #gsea {
-	padding-top: 1em;
+    padding-top: 1em;
 }
 #sfrm {
-	width: 30%;
-	margin: 0 auto;
+    width: 30%;
+    margin: 0 auto;
 }
 #sfrm input {
-	padding: 0.3ex;
-	margin: 0.4ex;
+    padding: 0.3ex;
+    margin: 0.4ex;
 }
 #sfrm .gseaopt {
-	font-size: small;
-	padding: 0.5ex
+    font-size: small;
+    padding: 0.5ex
 }
 #slinks {
-	float: right;
+    float: right;
 }
 .column {
-	float: left;
+    float: left;
 }
 .block {
-	margin: 1em 1ex;
+    margin: 1em 1ex;
 }
 .block h1 {
-	font-size: 120%;
-	font-weight: bold;
-	padding: 0.3ex 1ex;
-	margin: 0.1;
-	border-bottom: 2px solid #666;
+    font-size: 120%;
+    font-weight: bold;
+    padding: 0.3ex 1ex;
+    margin: 0.1;
+    border-bottom: 2px solid #666;
 }
 .block ul {
-	list-style-type: none;
+    list-style-type: none;
 }
 .block li {
-	padding: 0.2ex 1ex;
+    padding: 0.2ex 1ex;
 }
 .block h2 {
-	padding-left: 1ex;
-	font-size: 100%;
-	font-weight: bold;
+    padding-left: 1ex;
+    font-size: 100%;
+    font-weight: bold;
 }
 .block .chan {
-	font-size: 80%;
-	padding: 0.1ex 1ex;
+    font-size: 80%;
+    padding: 0.1ex 1ex;
 }
 .block .chan li {
-	padding: 0.1ex 2ex;
+    padding: 0.1ex 2ex;
 }

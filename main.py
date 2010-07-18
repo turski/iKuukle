@@ -6,10 +6,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def main_view():
-	block_grid = BlockGrid(conf='./layout')
-	block_grid.generate()
-	return render_template('main_view', block_grid=block_grid)
+    block_grid = BlockGrid(conf='./layout')
+    block_grid.generate()
+    return render_template('main_view', block_grid=block_grid)
 
 if __name__ == '__main__':
-	app.debug = True
-	app.run()
+    app.debug = True
+    app.run()
