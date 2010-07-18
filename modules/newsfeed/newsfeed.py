@@ -1,11 +1,12 @@
 from modules.block_grid import Block
 from jinja2 import Environment, FileSystemLoader
 import feedparser
-import os
 
 env = Environment(autoescape=True,
-                  loader=FileSystemLoader('modules/newsfeed/templates'))
-template = env.get_template('newsfeedblock')
+                  loader=FileSystemLoader('modules/newsfeed/'),
+                  extensions=['jinja2.ext.loopcontrols'])
+
+template = env.get_template('block_template.html')
 
 class NewsFeedBlock(Block):
 	def __init__(self, feed_url, news_count):

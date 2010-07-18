@@ -2,12 +2,11 @@ from modules.block_grid import Block
 from jinja2 import Environment, FileSystemLoader
 from threading import BoundedSemaphore, Thread
 import feedparser
-import os
 
 env = Environment(autoescape=True,
                   loader=FileSystemLoader('modules/telkussa/'),
                   extensions=['jinja2.ext.loopcontrols'])
-template = env.get_template('telkussa_block_template')
+template = env.get_template('block_template.html')
 
 feed_url_base = 'http://telkussa.fi/RSS/Channel/%i'
 
